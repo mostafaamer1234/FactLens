@@ -1,0 +1,9 @@
+flask
+numpy
+pandas
+scikit-learn
+joblib
+kagglehub
+gunicorn
+gunicorn[gthread]
+uvicorn

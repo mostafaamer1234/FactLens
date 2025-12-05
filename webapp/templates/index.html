@@ -1,0 +1,59 @@
+<!-- webapp/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FactLens – Fake News Detection & Rumor Themes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="app-header">
+    <h1>FactLens</h1>
+    <p>Fake News Detection &amp; Rumor Theme Explorer</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Analyze a News Article</h2>
+      <p>Paste the full article text or a long excerpt below and click <strong>Analyze</strong>.</p>
+
+      <form id="analyze-form">
+        <label for="article_text">Article Text</label>
+        <textarea id="article_text" name="article_text" rows="10" required></textarea>
+
+        <button type="submit" id="analyze-btn">Analyze</button>
+      </form>
+
+      <div id="error-message" class="error hidden"></div>
+    </section>
+
+    <section id="results-section" class="card hidden">
+      <h2>Results</h2>
+
+      <div class="result-row">
+        <div class="result-box">
+          <h3>Classification</h3>
+          <p id="predicted-label" class="predicted-label"></p>
+          <p id="fake-prob"></p>
+          <p id="real-prob"></p>
+        </div>
+
+        <div class="result-box">
+          <h3>Rumor Theme Cluster</h3>
+          <p id="cluster-name"></p>
+          <p><strong>Cluster size:</strong> <span id="cluster-size"></span></p>
+          <p><strong>Top terms:</strong></p>
+          <ul id="cluster-terms"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>CMPSC 445 – Applied Machine Learning | Online Misinformation Project</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* webapp/static/style.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+.app-header {
+  background: #1f3c88;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.app-header p {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 960px;
+  margin: 1.5rem auto 2.5rem;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font: inherit;
+  margin-bottom: 1rem;
+}
+
+button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  background: #1f3c88;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #284baf;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.error {
+  margin-top: 0.75rem;
+  color: #b00020;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.result-box {
+  flex: 1 1 260px;
+  background: #f9fafc;
+  border-radius: 6px;
+  padding: 1rem;
+  border: 1px solid #e1e4f2;
+}
+
+.predicted-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.predicted-label.fake {
+  color: #b00020;
+}
+
+.predicted-label.real {
+  color: #156c2f;
+}
+
+#cluster-terms {
+  padding-left: 1.2rem;
+  margin: 0.25rem 0 0;
+}
+
+#cluster-terms li {
+  margin: 0.15rem 0;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+  border-top: 1px solid #ddd;
+  background: #f0f2f7;
+}
