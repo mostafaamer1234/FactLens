@@ -1,5 +1,3 @@
-// webapp/static/script.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("analyze-form");
   const articleTextEl = document.getElementById("article_text");

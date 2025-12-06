@@ -1,5 +1,3 @@
-# webapp/app.py
-
 import os
 import json
 
@@ -7,13 +5,13 @@ from flask import Flask, render_template, request, jsonify
 import joblib
 import numpy as np
 
-# ---------- PATH SETUP ----------
+# PATH SETUP
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(CURRENT_DIR)
 MODELS_DIR = os.path.join(BASE_DIR, "models")
 
-# ---------- LOAD MODELS ----------
+# LOAD MODELS
 
 classifier_path = os.path.join(MODELS_DIR, "fake_news_classifier.joblib")
 pca_path = os.path.join(MODELS_DIR, "pca_50.joblib")
@@ -43,7 +41,7 @@ LABEL_MAP = {1: "FAKE", 0: "REAL"}
 app = Flask(__name__)
 
 
-# ---------- HELPER FUNCTIONS ----------
+# HELPER FUNCTIONS
 
 def classify_article(text: str):
     """Return predicted label (0/1), probabilities, and human-readable label."""
@@ -95,7 +93,7 @@ def assign_cluster(text: str):
     }
 
 
-# ---------- ROUTES ----------
+# ROUTES
 
 @app.route("/", methods=["GET"])
 def index():
