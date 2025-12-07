@@ -73,9 +73,7 @@ def ensure_news_csv_exists():
     )
 
 
-# -------------------------------------------------------------
-# STEP 2: LOAD + CLEAN DATA
-# -------------------------------------------------------------
+# LOAD + CLEAN DATA
 
 def load_and_clean_data(path):
     print(f">>> Loading dataset from {path}...")
@@ -217,7 +215,7 @@ def train_rumor_clusters(df, model, n_clusters=6):
 
 
 def main():
-    print("\n=== Starting FactLens Training ===\n")
+    print("\nStarting FactLens Training\n")
 
     ensure_news_csv_exists()
     df = load_and_clean_data(NEWS_CSV_PATH)
@@ -225,7 +223,7 @@ def main():
     clf = train_classifier(df)
     train_rumor_clusters(df, clf)
 
-    print("\n=== Training Complete! Models saved in /models ===\n")
+    print("\nTraining Complete! Models saved in /models\n")
 
 
 if __name__ == "__main__":
